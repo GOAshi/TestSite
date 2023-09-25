@@ -61,7 +61,33 @@
 				</ul></td>
 				<td id="Cel4"><img src="бензопила.jpg" width="600px"> <br>НОВЫЕ ГЛАВЫ УЖЕ ДОСТУПНЫ!</td>
 				<td id="Cel4"><img src="клинок.jpg" width="300px"> <br>~СКОРО~</td>			
-			</tr>					
+			</tr>
+			<center>
+						<div id="text-container">
+							<span>БЛАГОДАРИМ ЗА ПОСЕЩЕНИЕ ДАННОГО САЙТА</span>
+						</div>
+					</center>
+				  
+					<script>
+						const textContainer =
+							document.getElementById("text-container");
+						let hue = 0;
+				  
+						const animateText = () => {
+							hue = (hue + 1) % 360;
+							const color = `hsl(${hue}, 100%, 50%)`;
+							const shadowColor = `hsla(${hue}, 100%, 50%, 0.3)`;
+							textContainer.style.color = color;
+							textContainer.style.textShadow 
+								= `2px 2px 4px ${shadowColor}`;
+				  
+							// Continuously animate the text
+							requestAnimationFrame(animateText);
+						};
+				  
+						// Start the animation
+						animateText(); 
+					</script>
 		</table>
 	</body>
 </html>
